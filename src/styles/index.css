@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+  @variants responsive {
+    .w-main {
+      width: 68%;
+    }
+  }
+}
+
+body {
+  font-family: Consolas, Monospace, /* Linux = DejaVu Sans Mono */ Courier;
+}
