@@ -2,12 +2,14 @@ import React from 'react';
 import { StaticImage } from 'gatsby-plugin-image';
 import { Image } from '@/components/Image';
 import { ImageSet } from '@/components/ImageSet';
+import { HomeLink } from '@/components/HomeLink';
 
 const root = '../images/2020-blackberry-woods';
 
 export default function Home() {
   return (
     <main className="flex flex-col gap-10">
+      <HomeLink />
       <div className="mx-6 mt-10 lg:w-main lg:mx-auto">
         <h1 className="text-6xl my-7">Blackberry Woods</h1>
         <p className="max-w-3xl">

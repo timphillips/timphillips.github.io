@@ -10,7 +10,7 @@ export default function Home() {
       </div>
       <div className="mx-6 lg:w-main lg:mx-auto">
         <Year year={2020}>
-          <AlbumLink name="Vienna Woods, Austria" url="2020-vienna" />
+          <AlbumLink name="Vienna Woods, Austria" url="2020-vienna-woods" />
           <AlbumLink name="Costal Camping, Scotland" url="2020-coastal-camping" />
           <AlbumLink name="Blackberry Woods, England" url="2020-blackberry-woods" />
           <AlbumLink name="Menorca, Spain" url="2020-blackberry-woods" />
