@@ -1,12 +1,13 @@
 import React from 'react';
-import { StaticImage } from 'gatsby-plugin-image';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import { Image } from '@/components/Image';
 import { ImageSet } from '@/components/ImageSet';
 import { HomeLink } from '@/components/HomeLink';
+import { buildImagesMap, PageQueryResult } from '@/utils/image';
+import { graphql } from 'gatsby';
 
-const root = '../images/2020-blackberry-woods';
-
-export default function Home() {
+export default function BlackberryWoods({ data }: { data: PageQueryResult }) {
+  const images = buildImagesMap(data);
   return (
     <main className="flex flex-col gap-10">
       <HomeLink />
@@ -24,59 +25,75 @@ export default function Home() {
       </div>
 
       <Image>
-        <StaticImage src={`${root}/P1670033.JPG`} alt="Blackberry Woods" />
+        <GatsbyImage image={getImage(images.P1670033)} alt="Blackberry Woods" />
       </Image>
 
       <Image>
-        <StaticImage src={`${root}/P1670027.JPG`} alt="Blackberry Woods" />
-      </Image>
-
-      <ImageSet>
-        <StaticImage src={`${root}/P1670173.JPG`} alt="Blackberry Woods" />
-        <StaticImage src={`${root}/P1670160.JPG`} alt="Blackberry Woods" />
-      </ImageSet>
-
-      <Image>
-        <StaticImage src={`${root}/P1670239.JPG`} alt="Blackberry Woods" />
-      </Image>
-
-      <Image>
-        <StaticImage src={`${root}/P1670334.JPG`} alt="Blackberry Woods" />
-      </Image>
-
-      <Image>
-        <StaticImage src={`${root}/P1670345.JPG`} alt="Blackberry Woods" />
+        <GatsbyImage image={getImage(images.P1670027)} alt="Blackberry Woods" />
       </Image>
 
       <ImageSet>
-        <StaticImage src={`${root}/P1670359.JPG`} alt="Blackberry Woods" />
-        <StaticImage src={`${root}/P1670391.JPG`} alt="Blackberry Woods" />
+        <GatsbyImage image={getImage(images.P1670173)} alt="Blackberry Woods" />
+        <GatsbyImage image={getImage(images.P1670160)} alt="Blackberry Woods" />
       </ImageSet>
 
       <Image>
-        <StaticImage src={`${root}/P1670403.JPG`} alt="Blackberry Woods" />
+        <GatsbyImage image={getImage(images.P1670239)} alt="Blackberry Woods" />
       </Image>
 
       <Image>
-        <StaticImage src={`${root}/P1670412.JPG`} alt="Blackberry Woods" />
+        <GatsbyImage image={getImage(images.P1670334)} alt="Blackberry Woods" />
+      </Image>
+
+      <Image>
+        <GatsbyImage image={getImage(images.P1670345)} alt="Blackberry Woods" />
       </Image>
 
       <ImageSet>
-        <StaticImage src={`${root}/P1670429.JPG`} alt="Blackberry Woods" />
-        <StaticImage src={`${root}/P1670458.JPG`} alt="Blackberry Woods" />
+        <GatsbyImage image={getImage(images.P1670359)} alt="Blackberry Woods" />
+        <GatsbyImage image={getImage(images.P1670391)} alt="Blackberry Woods" />
       </ImageSet>
 
       <Image>
-        <StaticImage src={`${root}/P1670472.JPG`} alt="Blackberry Woods" />
+        <GatsbyImage image={getImage(images.P1670403)} alt="Blackberry Woods" />
       </Image>
 
       <Image>
-        <StaticImage src={`${root}/P1670466.JPG`} alt="Blackberry Woods" />
+        <GatsbyImage image={getImage(images.P1670412)} alt="Blackberry Woods" />
+      </Image>
+
+      <ImageSet>
+        <GatsbyImage image={getImage(images.P1670429)} alt="Blackberry Woods" />
+        <GatsbyImage image={getImage(images.P1670458)} alt="Blackberry Woods" />
+      </ImageSet>
+
+      <Image>
+        <GatsbyImage image={getImage(images.P1670472)} alt="Blackberry Woods" />
+      </Image>
+
+      <Image>
+        <GatsbyImage image={getImage(images.P1670466)} alt="Blackberry Woods" />
       </Image>
 
       <Image type="small">
-        <StaticImage src={`${root}/P1670509.JPG`} alt="Blackberry Woods" />
+        <GatsbyImage image={getImage(images.P1670509)} alt="Blackberry Woods" />
       </Image>
     </main>
   );
 }
+
+export const pageQuery = graphql`
+  query {
+    allFile(filter: { relativeDirectory: { eq: "2020-blackberry-woods" } }) {
+      edges {
+        node {
+          id
+          name
+          childImageSharp {
+            gatsbyImageData
+          }
+        }
+      }
+    }
+  }
+`;

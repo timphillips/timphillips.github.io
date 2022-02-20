@@ -5,7 +5,7 @@
 @layer utilities {
   @variants responsive {
     .w-main {
-      width: 62%;
+      width: 60%;
     }
   }
 }
