@@ -16,83 +16,40 @@ export default function ViennaWoods({ data }: { data: PageQueryResult }) {
         <p className="max-w-3xl">A chilly day exploring the hills of Kahlenberg in the Vienna Woods.</p>
         <hr className="border-gray-800 my-7" />
       </div>
-      <Image caption="Sunrise over Vienna">
-        <GatsbyImage image={getImage(images.P1600838)} alt="Vienna woods" />
-      </Image>
 
-      <Image>
-        <GatsbyImage image={getImage(images.P1600912)} alt="Vienna woods" />
-      </Image>
-
-      <Image>
-        <GatsbyImage image={getImage(images.P1600941)} alt="Vienna woods" />
-      </Image>
-
-      <Image>
-        <GatsbyImage image={getImage(images.P1600969)} alt="Vienna woods" />
-      </Image>
-
-      <Image>
-        <GatsbyImage image={getImage(images.P1600998)} alt="Vienna woods" />
-      </Image>
-
-      <Image>
-        <GatsbyImage image={getImage(images.P1610010)} alt="Vienna woods" />
-      </Image>
-
-      <Image type="full">
-        <GatsbyImage image={getImage(images.P1610031)} alt="Vienna woods" />
-      </Image>
-
+      <Image src={images.P1600838} caption="Sunrise over Vienna" />
+      <Image src={images.P1600912} />
+      <Image src={images.P1600941} />
+      <Image src={images.P1600969} />
+      <Image src={images.P1600998} />
+      <Image src={images.P1610010} />
+      <Image src={images.P1610031} type="full" />
       <ImageSet>
-        <GatsbyImage image={getImage(images.P1610050)} alt="Vienna woods" />
-        <GatsbyImage image={getImage(images.P1610034)} alt="Vienna woods" />
+        <Image src={images.P1610050} />
+        <Image src={images.P1610034} />
       </ImageSet>
-
       <ImageSet>
-        <GatsbyImage image={getImage(images.P1610049)} alt="Vienna woods" />
-        <GatsbyImage image={getImage(images.P1610054)} alt="Vienna woods" />
+        <Image src={images.P1610049} />
+        <Image src={images.P1610054} />
       </ImageSet>
-
-      <Image>
-        <GatsbyImage image={getImage(images.P1610085)} alt="Vienna woods" />
-      </Image>
-
-      <Image>
-        <GatsbyImage image={getImage(images.P1610061)} alt="Vienna woods" />
-      </Image>
-
-      <Image>
-        <GatsbyImage image={getImage(images.P1610106)} alt="Vienna woods" />
-      </Image>
-
-      <Image>
-        <GatsbyImage image={getImage(images.P1610120)} alt="Vienna woods" />
-      </Image>
-
+      <Image src={images.P1610085} />
+      <Image src={images.P1610061} />
+      <Image src={images.P1610106} />
+      <Image src={images.P1610120} />
       <ImageSet>
-        <GatsbyImage image={getImage(images.P1610135)} alt="Vienna woods" />
-        <GatsbyImage image={getImage(images.P1610137)} alt="Vienna woods" />
+        <Image src={images.P1610135} />
+        <Image src={images.P1610137} />
       </ImageSet>
-
-      <Image>
-        <GatsbyImage image={getImage(images.P1610117)} alt="Vienna woods" />
-      </Image>
-
+      <Image src={images.P1610117} />
       <ImageSet>
-        <GatsbyImage image={getImage(images.P1610140)} alt="Vienna woods" />
-        <GatsbyImage image={getImage(images.P1610151)} alt="Vienna woods" />
+        <Image src={images.P1610140} />
+        <Image src={images.P1610151} />
       </ImageSet>
-      <Image>
-        <GatsbyImage image={getImage(images.P1610145)} alt="Vienna woods" />
-      </Image>
-      <Image>
-        <GatsbyImage image={getImage(images.P1610143)} alt="Vienna woods" />
-      </Image>
-
+      <Image src={images.P1610145} />
+      <Image src={images.P1610143} />
       <ImageSet>
-        <GatsbyImage image={getImage(images.P1610156)} alt="Vienna woods" />
-        <GatsbyImage image={getImage(images.P1610165)} alt="Vienna woods" />
+        <Image src={images.P1610156} />
+        <Image src={images.P1610165} />
       </ImageSet>
     </main>
   );

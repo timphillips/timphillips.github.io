@@ -24,60 +24,28 @@ export default function BlackberryWoods({ data }: { data: PageQueryResult }) {
         <hr className="border-gray-800 my-7" />
       </div>
 
-      <Image>
-        <GatsbyImage image={getImage(images.P1670033)} alt="Blackberry Woods" />
-      </Image>
-
-      <Image>
-        <GatsbyImage image={getImage(images.P1670027)} alt="Blackberry Woods" />
-      </Image>
-
+      <Image src={images.P1670033} />
+      <Image src={images.P1670027} />
       <ImageSet>
-        <GatsbyImage image={getImage(images.P1670173)} alt="Blackberry Woods" />
-        <GatsbyImage image={getImage(images.P1670160)} alt="Blackberry Woods" />
+        <Image src={images.P1670173} />
+        <Image src={images.P1670160} />
       </ImageSet>
-
-      <Image>
-        <GatsbyImage image={getImage(images.P1670239)} alt="Blackberry Woods" />
-      </Image>
-
-      <Image>
-        <GatsbyImage image={getImage(images.P1670334)} alt="Blackberry Woods" />
-      </Image>
-
-      <Image>
-        <GatsbyImage image={getImage(images.P1670345)} alt="Blackberry Woods" />
-      </Image>
-
+      <Image src={images.P1670239} />
+      <Image src={images.P1670334} />
+      <Image src={images.P1670345} />
       <ImageSet>
-        <GatsbyImage image={getImage(images.P1670359)} alt="Blackberry Woods" />
-        <GatsbyImage image={getImage(images.P1670391)} alt="Blackberry Woods" />
+        <Image src={images.P1670359} />
+        <Image src={images.P1670391} />
       </ImageSet>
-
-      <Image>
-        <GatsbyImage image={getImage(images.P1670403)} alt="Blackberry Woods" />
-      </Image>
-
-      <Image>
-        <GatsbyImage image={getImage(images.P1670412)} alt="Blackberry Woods" />
-      </Image>
-
+      <Image src={images.P1670403} />
+      <Image src={images.P1670412} />
       <ImageSet>
-        <GatsbyImage image={getImage(images.P1670429)} alt="Blackberry Woods" />
-        <GatsbyImage image={getImage(images.P1670458)} alt="Blackberry Woods" />
+        <Image src={images.P1670429} />
+        <Image src={images.P1670458} />
       </ImageSet>
-
-      <Image>
-        <GatsbyImage image={getImage(images.P1670472)} alt="Blackberry Woods" />
-      </Image>
-
-      <Image>
-        <GatsbyImage image={getImage(images.P1670466)} alt="Blackberry Woods" />
-      </Image>
-
-      <Image type="small">
-        <GatsbyImage image={getImage(images.P1670509)} alt="Blackberry Woods" />
-      </Image>
+      <Image src={images.P1670472} />
+      <Image src={images.P1670466} />
+      <Image src={images.P1670509} type="small" />
     </main>
   );
 }

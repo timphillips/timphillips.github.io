@@ -1,8 +1,8 @@
-import React, { ReactNode } from 'react';
+import React, { ReactElement, ReactNode } from 'react';
 import { Image } from '@/components/Image';
 
 export interface ImageSetProps {
-  children: ReactNode[];
+  children: ReactElement[];
 }
 
 export function ImageSet({ children }: ImageSetProps) {
@@ -11,8 +11,8 @@ export function ImageSet({ children }: ImageSetProps) {
   }
   return (
     <div className="grid gap-10 grid-cols-1 lg:grid-cols-2 lg:w-main lg:m-auto">
-      <Image type="imageSet">{children[0]}</Image>
-      <Image type="imageSet">{children[1]}</Image>
+      {React.cloneElement(children[0], { type: 'imageSet' })}
+      {React.cloneElement(children[1], { type: 'imageSet' })}
     </div>
   );
 }

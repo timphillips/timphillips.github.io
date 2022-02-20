@@ -1,13 +1,13 @@
-import React, { ReactNode } from 'react';
-import { StaticImage } from 'gatsby-plugin-image';
+import React from 'react';
+import { GatsbyImage, getImage, ImageDataLike } from 'gatsby-plugin-image';
 
 export interface ImageProps {
-  children: ReactNode;
+  src: ImageDataLike;
   caption?: string;
   type?: 'full' | 'imageSet' | 'medium' | 'small';
 }
 
-export function Image({ children, caption, type = 'medium' }: ImageProps) {
+export function Image({ src, caption, type = 'medium' }: ImageProps) {
   let className: string;
   switch (type) {
     case 'full': {
@@ -30,7 +30,7 @@ export function Image({ children, caption, type = 'medium' }: ImageProps) {
 
   return (
     <figure className={className}>
-      {children}
+      <GatsbyImage image={getImage(src)} alt={caption || ''} />
       {caption && <figcaption className="text-center text-gray-500 mx-3 mt-3">{caption}</figcaption>}
     </figure>
   );
