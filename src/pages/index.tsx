@@ -1,25 +1,40 @@
 import React, { ReactNode } from 'react';
 import { Link } from 'gatsby';
+import { Layout } from '@/components/Layout';
+import { Header, HeaderTitle } from '@/components/Header';
 
 export default function Home() {
   return (
-    <main className="flex flex-col">
-      <div className="mx-6 mt-10 lg:w-main lg:mx-auto">
-        <h1 className="text-6xl my-7">Photolog</h1>
-        <hr className="border-gray-800 my-7" />
-      </div>
+    <Layout>
+      <Header>
+        <HeaderTitle>Photolog</HeaderTitle>
+      </Header>
       <div className="mx-6 lg:w-main lg:mx-auto">
         <Year year={2020}>
           <AlbumLink name="Vienna Woods, Austria" url="2020-vienna-woods" />
-          <AlbumLink name="Costal Camping, Scotland" url="2020-coastal-camping" />
+          {/* <AlbumLink name="Costal Camping, Scotland" url="2020-coastal-camping" /> */}
           <AlbumLink name="Blackberry Woods, England" url="2020-blackberry-woods" />
-          <AlbumLink name="Menorca, Spain" url="2020-blackberry-woods" />
+          {/* <AlbumLink name="Menorca, Spain" url="2020-blackberry-woods" /> */}
         </Year>
-        <Year year={2019}>
+        {/* <Year year={2019}>
+          <AlbumLink name="Spain" url="2019-italy" />
           <AlbumLink name="Italy" url="2019-italy" />
         </Year>
+        <Year year={2018}>
+          <AlbumLink name="Iceland" url="2019-italy" />
+        </Year>
+        <Year year={2017}>
+          <AlbumLink name="Oregon" url="2019-italy" />
+          <AlbumLink name="Assiniboine Hike, Canada" url="2019-italy" />
+        </Year>
+        <Year year={2016}>
+          <AlbumLink name="Italy" url="2019-italy" />
+        </Year>
+        <Year year={2015}>
+          <AlbumLink name="Italy" url="2019-italy" />
+        </Year> */}
       </div>
-    </main>
+    </Layout>
   );
 }
 

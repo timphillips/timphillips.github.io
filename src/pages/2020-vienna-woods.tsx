@@ -1,21 +1,20 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import { GatsbyImage, getImage, ImageDataLike } from 'gatsby-plugin-image';
 import { Image } from '@/components/Image';
 import { ImageSet } from '@/components/ImageSet';
 import { HomeLink } from '@/components/HomeLink';
 import { buildImagesMap, PageQueryResult } from '@/utils/image';
+import { Header, HeaderSubtitle, HeaderTitle } from '@/components/Header';
+import { Layout } from '@/components/Layout';
 
 export default function ViennaWoods({ data }: { data: PageQueryResult }) {
   const images = buildImagesMap(data);
   return (
-    <main className="flex flex-col gap-10">
-      <HomeLink />
-      <div className="mx-6 mt-10 lg:w-main lg:mx-auto">
-        <h1 className="text-6xl my-7">Vienna Woods</h1>
-        <p className="max-w-3xl">A chilly day exploring the hills of Kahlenberg in the Vienna Woods.</p>
-        <hr className="border-gray-800 my-7" />
-      </div>
+    <Layout>
+      <Header>
+        <HeaderTitle>Vienna Woods</HeaderTitle>
+        <HeaderSubtitle>A chilly day exploring the hills of Kahlenberg in the Vienna Woods.</HeaderSubtitle>
+      </Header>
 
       <Image src={images.P1600838} caption="Sunrise over Vienna" />
       <Image src={images.P1600912} />
@@ -34,7 +33,7 @@ export default function ViennaWoods({ data }: { data: PageQueryResult }) {
       </ImageSet>
       <Image src={images.P1610085} />
       <Image src={images.P1610061} />
-      <Image src={images.P1610106} />
+      <Image src={images.P1610106} caption="St. Josef auf dem Kahlenberg" />
       <Image src={images.P1610120} />
       <ImageSet>
         <Image src={images.P1610135} />
@@ -51,7 +50,7 @@ export default function ViennaWoods({ data }: { data: PageQueryResult }) {
         <Image src={images.P1610156} />
         <Image src={images.P1610165} />
       </ImageSet>
-    </main>
+    </Layout>
   );
 }
 

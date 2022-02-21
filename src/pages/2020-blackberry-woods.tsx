@@ -1,28 +1,27 @@
 import React from 'react';
-import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import { Image } from '@/components/Image';
 import { ImageSet } from '@/components/ImageSet';
 import { HomeLink } from '@/components/HomeLink';
 import { buildImagesMap, PageQueryResult } from '@/utils/image';
 import { graphql } from 'gatsby';
+import { Header, HeaderSubtitle, HeaderTitle } from '@/components/Header';
+import { Layout } from '@/components/Layout';
 
 export default function BlackberryWoods({ data }: { data: PageQueryResult }) {
   const images = buildImagesMap(data);
   return (
-    <main className="flex flex-col gap-10">
-      <HomeLink />
-      <div className="mx-6 mt-10 lg:w-main lg:mx-auto">
-        <h1 className="text-6xl my-7">Blackberry Woods</h1>
-        <p className="max-w-3xl">
+    <Layout>
+      <Header>
+        <HeaderTitle>Blackberry Woods</HeaderTitle>
+        <HeaderSubtitle>
           Alycia and I spent a few days at{' '}
           <a href="https://www.blackberrywood.com/" target="_blank">
             Blackberry Woods
           </a>{' '}
           in South Downs National Park.
-        </p>
-        <p className="max-w-3xl">It rained most days, but luckily we booked a cosy cabin to sleep in.</p>
-        <hr className="border-gray-800 my-7" />
-      </div>
+        </HeaderSubtitle>
+        <HeaderSubtitle>It rained most days, but luckily we booked a cosy cabin to sleep in.</HeaderSubtitle>
+      </Header>
 
       <Image src={images.P1670033} />
       <Image src={images.P1670027} />
@@ -32,7 +31,7 @@ export default function BlackberryWoods({ data }: { data: PageQueryResult }) {
       </ImageSet>
       <Image src={images.P1670239} />
       <Image src={images.P1670334} />
-      <Image src={images.P1670345} />
+      <Image src={images.P1670345} caption="On the road to Hassocks" />
       <ImageSet>
         <Image src={images.P1670359} />
         <Image src={images.P1670391} />
@@ -46,7 +45,7 @@ export default function BlackberryWoods({ data }: { data: PageQueryResult }) {
       <Image src={images.P1670472} />
       <Image src={images.P1670466} />
       <Image src={images.P1670509} type="small" />
-    </main>
+    </Layout>
   );
 }
 
