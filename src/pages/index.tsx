@@ -9,6 +9,7 @@ export default function Home() {
       <Header>
         <HeaderTitle>Photolog</HeaderTitle>
       </Header>
+
       <div className="mx-6 lg:w-main lg:mx-auto">
         <Year year={2020}>
           <AlbumLink name="Vienna Woods, Austria" url="2020-vienna-woods" />
@@ -16,11 +17,13 @@ export default function Home() {
           <AlbumLink name="Blackberry Woods, England" url="2020-blackberry-woods" />
           {/* <AlbumLink name="Menorca, Spain" url="2020-blackberry-woods" /> */}
         </Year>
-        {/* <Year year={2019}>
-          <AlbumLink name="Spain" url="2019-italy" />
-          <AlbumLink name="Italy" url="2019-italy" />
+        <Year year={2019}>
+          {/* <AlbumLink name="Spain" url="2019-italy" /> */}
+          <AlbumLink name="Milan, Italy" url="2019-italy-milan" />
+          <AlbumLink name="Verona, Italy" url="2019-italy-verona" />
+          <AlbumLink name="Venice, Italy" url="2019-italy-venice" />
         </Year>
-        <Year year={2018}>
+        {/* <Year year={2018}>
           <AlbumLink name="Iceland" url="2019-italy" />
         </Year>
         <Year year={2017}>
