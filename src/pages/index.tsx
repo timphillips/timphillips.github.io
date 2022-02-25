@@ -1,14 +1,14 @@
 import React, { ReactNode } from 'react';
 import { Link } from 'gatsby';
-import { Layout } from '@/components/Layout';
 import { Header, HeaderTitle } from '@/components/Header';
 
 export default function Home() {
   return (
-    <Layout>
-      <Header>
-        <HeaderTitle>Photolog</HeaderTitle>
-      </Header>
+    <main className="flex flex-col gap-10 my-10">
+      <div className="mx-6 lg:w-main lg:mx-auto">
+        <h1 className="text-4xl mb-5">Photolog</h1>
+        <hr className="border-gray-400 my-4" />
+      </div>
 
       <div className="flex flex-col gap-10 mx-6 lg:w-main lg:mx-auto">
         <Year year={2020}>
@@ -37,7 +37,7 @@ export default function Home() {
           <AlbumLink name="Italy" url="2019-italy" />
         </Year> */}
       </div>
-    </Layout>
+    </main>
   );
 }
 

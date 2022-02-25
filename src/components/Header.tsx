@@ -2,7 +2,7 @@ import React, { PropsWithChildren } from 'react';
 
 export function Header({ children }: PropsWithChildren<{}>) {
   return (
-    <div className="mx-6 mt-10 lg:w-main lg:mx-auto">
+    <div className="mx-6 lg:w-main lg:mx-auto">
       {children}
       <hr className="border-gray-400 my-7" />
     </div>
@@ -10,7 +10,7 @@ export function Header({ children }: PropsWithChildren<{}>) {
 }
 
 export function HeaderTitle({ children }: PropsWithChildren<{}>) {
-  return <h1 className="text-5xl my-7">{children}</h1>;
+  return <h1 className="text-4xl mb-5">{children}</h1>;
 }
 
 export function HeaderSubtitle({ children }: PropsWithChildren<{}>) {
