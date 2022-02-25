@@ -1,7 +1,6 @@
 import React from 'react';
 import { Image } from '@/components/Image';
 import { ImageSet } from '@/components/ImageSet';
-import { HomeLink } from '@/components/HomeLink';
 import { buildImagesMap, PageQueryResult } from '@/utils/image';
 import { graphql } from 'gatsby';
 import { Header, HeaderSubtitle, HeaderTitle } from '@/components/Header';

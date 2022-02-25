@@ -4,13 +4,16 @@ import { Header, HeaderTitle } from '@/components/Header';
 
 export default function Home() {
   return (
-    <main className="flex flex-col gap-10 my-10">
+    <main className="flex flex-col gap-10 my-16">
       <div className="mx-6 lg:w-main lg:mx-auto">
         <h1 className="text-4xl mb-5">Photolog</h1>
         <hr className="border-gray-400 my-4" />
       </div>
 
       <div className="flex flex-col gap-10 mx-6 lg:w-main lg:mx-auto">
+        <Year year={2021}>
+          <AlbumLink name="Brighton, England" url="2021-brighton" />
+        </Year>
         <Year year={2020}>
           <AlbumLink name="Vienna Woods, Austria" url="2020-vienna-woods" />
           {/* <AlbumLink name="Costal Camping, Scotland" url="2020-coastal-camping" /> */}
@@ -62,7 +65,7 @@ interface YearProps {
 function Year({ children, year }: YearProps) {
   return (
     <div>
-      <h1 className="font-bold text-2xl">{year}</h1>
+      <h1 className="text-2xl">{year}</h1>
       <ol>{children}</ol>
     </div>
   );
