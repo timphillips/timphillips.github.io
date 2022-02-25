@@ -6,7 +6,7 @@ import { buildImagesMap, PageQueryResult } from '@/utils/image';
 import { Header, HeaderTitle } from '@/components/Header';
 import { Layout } from '@/components/Layout';
 
-export default function ViennaWoods({ data }: { data: PageQueryResult }) {
+export default function ItalyVerona({ data }: { data: PageQueryResult }) {
   const images = buildImagesMap(data);
   return (
     <Layout>

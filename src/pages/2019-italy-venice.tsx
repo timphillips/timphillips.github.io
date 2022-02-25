@@ -6,7 +6,7 @@ import { buildImagesMap, PageQueryResult } from '@/utils/image';
 import { Header, HeaderTitle } from '@/components/Header';
 import { Layout } from '@/components/Layout';
 
-export default function ViennaWoods({ data }: { data: PageQueryResult }) {
+export default function ItalyVenice({ data }: { data: PageQueryResult }) {
   const images = buildImagesMap(data);
   return (
     <Layout>
@@ -15,7 +15,7 @@ export default function ViennaWoods({ data }: { data: PageQueryResult }) {
       </Header>
 
       <ImageSet>
-        <Image src={images.DSC03983} caption="Quiet streets" />
+        <Image src={images.DSC03983} />
         <Image src={images.P1600089} />
       </ImageSet>
       <Image src={images.P1600138} caption="Christmas in Venice" />

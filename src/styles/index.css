@@ -5,16 +5,17 @@
 @layer utilities {
   @variants responsive {
     .w-main {
-      width: 60%;
+      width: 58%;
     }
   }
 }
 
 body {
+  color: #3a3a3a;
   font-family: Consolas, Monospace, /* Linux = DejaVu Sans Mono */ Courier;
+  font-feature-settings: 'kern', 'frac', 'kern', 'ss02';
 }
 
 ::selection {
-  color: white;
-  background: black;
+  background: hsl(0 0% 0%/0.071);
 }

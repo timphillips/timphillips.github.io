@@ -6,14 +6,13 @@ import { buildImagesMap, PageQueryResult } from '@/utils/image';
 import { Header, HeaderTitle } from '@/components/Header';
 import { Layout } from '@/components/Layout';
 
-export default function ViennaWoods({ data }: { data: PageQueryResult }) {
+export default function ItalyMilan({ data }: { data: PageQueryResult }) {
   const images = buildImagesMap(data);
   return (
     <Layout>
       <Header>
         <HeaderTitle>Milan, Italy</HeaderTitle>
       </Header>
-
       <ImageSet>
         <Image src={images.DSC03799} />
         <Image src={images.DSC03806} />

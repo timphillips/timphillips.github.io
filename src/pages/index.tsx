@@ -10,7 +10,7 @@ export default function Home() {
         <HeaderTitle>Photolog</HeaderTitle>
       </Header>
 
-      <div className="mx-6 lg:w-main lg:mx-auto">
+      <div className="flex flex-col gap-10 mx-6 lg:w-main lg:mx-auto">
         <Year year={2020}>
           <AlbumLink name="Vienna Woods, Austria" url="2020-vienna-woods" />
           {/* <AlbumLink name="Costal Camping, Scotland" url="2020-coastal-camping" /> */}
@@ -61,7 +61,7 @@ interface YearProps {
 
 function Year({ children, year }: YearProps) {
   return (
-    <div className="my-10">
+    <div>
       <h1 className="font-bold text-2xl">{year}</h1>
       <ol>{children}</ol>
     </div>
