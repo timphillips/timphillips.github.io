@@ -12,7 +12,8 @@ export default function Home() {
 
       <div className="flex flex-col gap-10 mx-6 lg:w-main lg:mx-auto">
         <Year year={2021}>
-          <AlbumLink name="Brighton, England" url="2021-brighton" />
+          <AlbumLink name="Brighton, England (1)" url="2021-brighton-1" />
+          <AlbumLink name="Brighton, England (2)" url="2021-brighton-2" />
         </Year>
         <Year year={2020}>
           <AlbumLink name="Vienna Woods, Austria" url="2020-vienna-woods" />
