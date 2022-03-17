@@ -1,6 +1,5 @@
 import React, { ReactNode } from 'react';
 import { Link } from 'gatsby';
-import { Header, HeaderTitle } from '@/components/Header';
 
 export default function Home() {
   return (
@@ -14,6 +13,7 @@ export default function Home() {
         <Year year={2021}>
           <AlbumLink name="Brighton, England (1)" url="2021-brighton-1" />
           <AlbumLink name="Brighton, England (2)" url="2021-brighton-2" />
+          <AlbumLink name="Conwy, Wales" url="2021-wales-conwy" />
         </Year>
         <Year year={2020}>
           <AlbumLink name="Vienna Woods, Austria" url="2020-vienna-woods" />
